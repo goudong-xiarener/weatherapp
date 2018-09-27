@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>天气</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <script src="rem.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<!--天气页面头部-->
+  <header class="tianqi">
+        <div class="h_citys">
+            <i class="iconfont icon-dingwei"></i>
+            <span></span>
+           <img src="./img/header01.png" alt="">
+        </div>
+      <div class="city">
+          <header>
+              <div class="h_top">
+                  <i class="iconfont icon-sdf"></i>
+                  腾讯天气
+              </div>
+              <div class="search">
+                  <input type="text" placeholder="搜索市、区、县等">
+                  &nbsp&nbsp
+                  <button>取消</button>
+              </div>
+              <div class="dangqian">
+                  <div>当前定位</div>
+                  <div>小店区</div>
+              </div>
+              <div class="dangqian history">
+                  <i class="iconfont icon-shanchu"></i>
+                  <div>历史记录</div>
+                  <div class="one">上海</div>
+                  <div class="two">拉萨</div>
+              </div>
+              <div class="hot_city shengfen">
+                  <ul class="hotcity">
+                      <!--<div class="hot">热门城市</div>-->
+                      <!--&lt;!&ndash;<li>北京</li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li>上海</li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li>广州</li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li>深圳</li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                      <!--&lt;!&ndash;<li></li>&ndash;&gt;-->
+                  <!--</ul>-->
+              </div>
+              <div class="hot_city">
+                  <div class="hot fengjing">热门景区</div>
+                  <ul class="fengjing">
+                      <li>故宫</li>
+                      <li>颐和园</li>
+                      <li>九寨沟</li>
+                      <li>凤凰古城</li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                  </ul>
+              </div>
+          </header>
+      </div>
+        <div class="h_air">
+            <div class="h_air_block">
+                <span>空气</span>
+                <span class="h_air_block_b">轻度污染</span>
+            </div>
+        </div>
+        <div class="h_weather">
+            <span>0°</span>
+            <span>阴</span>
+            <span>湿度</span> <span>28%</span>
+        </div>
+        <div class="h_tishi">天冷了，注意保暖~</div>
+        <div></div>
+        <div class="h_bg"><img src="./img/screen.png" alt=""> </div>
+  </header>
+<!--天气情况-->
+<section class="h_tianqi">
+  <div class="scroll">
+    <!--第一块今明两天-->
+   <div class="s_top">
+       <span class="s_top_l">
+          <!--<div class="s_top_l_top">-->
+              <!--<span class="s_top_l_top_l">今天</span>-->
+              <!--<span class="s_top_l_top_l left">-->
+                  <!--<span>2 </span><span> /</span><span>-11℃</span></span>-->
+          <!--</div>-->
+           <!--<div class="s_top_l_bottom">-->
+               <!--<span class="s_top_l_top_l b_t">晴转多云</span>-->
+               <!--<span class="s_top_l_top_l b_b"><img src="./img/0.png" alt=""></span>-->
+           <!--</div>-->
+       </span>
+       <span class="s_top_r">
+           <!--<div class="s_top_l_top">-->
+               <!--<span class="s_top_l_top_l">明天</span>-->
+               <!--<span class="s_top_l_top_l right">-->
+                  <!--<span>2</span><span>/</span><span>-11℃</span></span>-->
+               <!--&lt;!&ndash;<span class="s_top_l_top_l">3/-13℃</span>&ndash;&gt;-->
+           <!--</div>-->
+           <!--<div class="s_top_l_bottom">-->
+               <!--<span class="s_top_l_top_l">晴</span>-->
+               <!--<span class="s_top_l_top_l "><img src="./img/0.png" alt="" class="one"></span>-->
+           <!--</div>-->
+       </span>
+   </div>
+    <!--第二块每个小时的天气-->
+    <div class="s_time">
+         <ul class="s_time_one hour">
+             <!--<li class="s_time_one hour one">-->
+                 <!--<span>12:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>13:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>0℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>14:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>15:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>16:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>17:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>18:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>19:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>20:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>21:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>22:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+             <!--<li>-->
+                 <!--<span>23:00</span>-->
+                 <!--<img src="./img/0.png" alt="">-->
+                 <!--<span>-1℃</span>-->
+             <!--</li>-->
+         </ul>
+    </div>
+    <div class="s_weather">
+        <!--24小时天气-->
+        <ul class="s_time_one date">
+            <!--<li class="one">-->
+                <!--<span>-->
+                    <!--昨天-->
+                    <!--<div>01/15</div>-->
+                <!--</span>-->
+                <!--<span>多云</span>-->
+                <!--<img src="./img/1.png" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>今天-->
+                    <!--<div>01/16</div>-->
+                <!--</span>-->
+                <!--<span>晴</span>-->
+                <!--<img src="./img/0.png" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>明天-->
+                    <!--<div>01/17</div>-->
+                <!--</span>-->
+                <!--<span>晴</span>-->
+                <!--<img src="./img/0.png" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>后天-->
+                    <!--<div>01/18</div>-->
+                <!--</span>-->
+                <!--<span>多云</span>-->
+                <!--<img src="./img/1.png" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>周五-->
+                    <!--<div>01/18</div>-->
+                <!--</span>-->
+                <!--<span>晴</span>-->
+                <!--<img src="./img/0.png" alt="">-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<span>周六-->
+                   <!--<div>01/19</div>-->
+                <!--</span>-->
+                <!--<span>晴</span>-->
+                <!--<img src="./img/0.png" alt="">-->
+            <!--</li>-->
+            <!--<li class="one">-->
+                <!--<span>-->
+                    <!--昨天-->
+                    <!--<div>01/15</div>-->
+                <!--</span>-->
+                <!--<span>多云</span>-->
+                <!--<img src="./img/1.png" alt="">-->
+            <!--</li>-->
+            <!--<li class="one">-->
+                <!--<span>-->
+                    <!--昨天-->
+                    <!--<div>01/15</div>-->
+                <!--</span>-->
+                <!--<span>多云</span>-->
+                <!--<img src="./img/1.png" alt="">-->
+            <!--</li> <li class="one">-->
+                <!--<span>-->
+                    <!--昨天-->
+                    <!--<div>01/15</div>-->
+                <!--</span>-->
+            <!--<span>多云</span>-->
+            <!--<img src="./img/1.png" alt="">-->
+        <!--</li> <li class="one">-->
+                <!--<span>-->
+                    <!--昨天-->
+                    <!--<div>01/15</div>-->
+                <!--</span>-->
+            <!--<span>多云</span>-->
+            <!--<img src="./img/1.png" alt="">-->
+        <!--</li>-->
+
+
+        </ul>
+        <!--温度曲线图-->
+        <div class="s_time_two"></div>
+        <!--未来十五天天气-->
+        <ul class="s_time_one three">
+            <!--<li class="one">-->
+                <!--<img src="./img/31.png" alt="">-->
+                <!--<span>多云</span>-->
+                <!--<span>-->
+                    <!--西北风-->
+                    <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/31.png" alt="">-->
+                <!--<span>多云</span>-->
+                <!--<span>西南风-->
+                    <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/30.png" alt="">-->
+                <!--<span>晴</span>-->
+                <!--<span>西北风-->
+                    <!--<div>4级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/30.png" alt="">-->
+                <!--<span>晴</span>-->
+                <!--<span>西风-->
+                    <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/30.png" alt="">-->
+                <!--<span>晴</span>-->
+                <!--<span>西风-->
+                    <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/31.png" alt="">-->
+                <!--<span>多云</span>-->
+                <!--<span>西风-->
+                   <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<img src="./img/31.png" alt="">-->
+                <!--<span>多云</span>-->
+                <!--<span>西风-->
+                   <!--<div>3级</div>-->
+                <!--</span>-->
+            <!--</li><li>-->
+            <!--<img src="./img/31.png" alt="">-->
+            <!--<span>多云</span>-->
+                <!--<span>西风-->
+                   <!--<div>3级</div>-->
+                <!--</span>-->
+        <!--</li><li>-->
+            <!--<img src="./img/31.png" alt="">-->
+            <!--<span>多云</span>-->
+                <!--<span>西风-->
+                   <!--<div>3级</div>-->
+                <!--</span>-->
+        <!--</li><li>-->
+            <!--<img src="./img/31.png" alt="">-->
+            <!--<span>多云</span>-->
+                <!--<span>西风-->
+                   <!--<div>3级</div>-->
+                <!--</span>-->
+        <!--</li>-->
+        </ul>
+    </div>
+    <ul class="s_tubiao">
+        <li> <i class="iconfont icon-san"></i>
+             <div>不带伞</div>
+             <div>雨伞</div>
+        </li>
+        <li> <i class="iconfont icon-duanxiu"></i>
+             <div>冷</div>
+             <div>穿衣</div>
+        </li>
+        <li> <i class="iconfont icon-yangguang"></i>
+             <div>较弱</div>
+             <div>防晒</div>
+        </li>
+        <li> <i class="iconfont icon-jiaonang"></i>
+             <div>较易发</div>
+             <div>感冒</div>
+        </li>
+        <li> <i class="iconfont icon-lanqiu1"></i>
+             <div>较不易</div>
+             <div>运动</div>
+        </li>
+        <li> <i class="iconfont icon-xiche"></i>
+             <div>较适宜</div>
+             <div>洗车</div>
+        </li>
+        <li> <i class="iconfont icon-yu1"></i>
+             <div>不宜</div>
+             <div>钓鱼</div>
+        </li>
+        <li> <i class="iconfont icon-honglvdeng"></i>
+             <div>良好</div>
+             <div>交通</div>
+        </li>
+    </ul>
+    <div class="s_bottom">数据来源于中国天气网</div>
+  </div>
+</section>
+</body>
+</html>
+<script src="index.js"></script>
